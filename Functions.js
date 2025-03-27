@@ -54,6 +54,11 @@ const arrowSum = (a,b)=>{
 };
 arrowSum(8,9);
 
+// if you use () instead of {} then no use of return keyword
+
+const addTwo=(num1,num2)=> (num1 + num2)
+addTwo(5,6);
+
 const vowelsCount=(str)=>{
     let count=0;
     for(let i of str){
@@ -103,6 +108,29 @@ let sum = arr.reduce((prev,curr)=>
 return prev+curr;
 });
 console.log(sum);
+
+
+
+//IIFE -->An Immediately Invoked Function Expression (IIFE) is a function that executes immediately after being defined.
+(function() {
+    console.log("IIFE executed!");
+})();
+
+
+(function() {
+    let message = "Hello from IIFE!";
+    console.log(message);
+})();
+
+
+(() => {
+    console.log("Arrow function IIFE");
+})();
+
+(function(name) {
+    console.log(`Hello, ${name}!`);
+})("John");
+
 
 
 
