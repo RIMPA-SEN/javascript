@@ -1,0 +1,45 @@
+ Install vs code and node js
+node -v to check node version
+To run node file_name.js
+mdn documentation
+
+git commands to setup:
+
+1. Create repo
+2. git init
+3. git add <fileName>
+4. git commit -m "Message"
+5. git remote add origin <url>
+6. git push -u origin master
+
+7. git checkout -b main
+8. git fetch origin
+9. git merge master
+10. git pull --rebase origin main
+11. git push origin main
+12. git push origin --delete master
+
+Day-1
+1. Take data from user and store in variables. let var const
+2. Comments : single line // multi line /*......*/
+3. "use strict";  treat all JS code as newer version
+4. ECMA Script
+5. DataTypes : Primitive (Call By Value) and Non-primitive (Call By Reference)
+6. typeof operator
+7. Operators
+8. Conversion
+9. Stack (primitive) and Heap Memory (Non-primitive)
+10. Strings
+11. Numbers And Maths
+12. Date and Time
+
+Day-2
+1. Arrays
+2. Objects
+3. Functions (Changes made)
+4. Scopes:Global and block
+5. Hoisting 
+6. IIFE
+7. Control Statements
+8. for -while-do while loop
+9. 
