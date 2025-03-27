@@ -96,6 +96,37 @@ let count= marks.filter((val)=>{
 );
 console.log(count);
 
+
+
+const numbers = [1, 2, 3, 4];
+
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled);
+
+
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 }
+];
+
+const userNames = users.map(user => user.name);
+
+console.log(userNames);
+
+//map and filter chaining
+
+const numbers1 = [1, 2, 3, 4, 5, 6];
+
+const doubledEvens = numbers
+    .filter(num => num % 2 === 0)  // Step 1: Keep only even numbers
+    .map(num => num * 2);          // Step 2: Double them
+
+console.log(doubledEvens);
+
+
+
+
 let num = prompt("Enter a number");
 let arr=[];
 for(let i=1 ; i<=num;i++)
