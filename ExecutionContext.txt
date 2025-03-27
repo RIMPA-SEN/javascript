@@ -1,0 +1,37 @@
+Javascript execution context : Single threaded
+2 execution context:
+1. global Execution context
+2. function execution context
+3. eval execution context
+
+Javascript executes code in two phases:
+1. memory creation phase -->variables allocate memory
+2. Execution phase -->operations executes
+
+let val1 =10;
+let val2 =5;
+function addNum(num1,num2){
+    let total = num1 + num2;
+    return total;
+}
+
+let result1 = addNum(val1, val2);
+let result2 = addNum(10,2);
+
+step 1: Global execution  -->this
+step 2: memory creation phase --> val1 = undefined , val2 = undefined , addNum = definition of function ,
+                                  result1 = undefined , result2 = undefined
+step 3 : execution phase ---> val1 = 10, val2 = 5 , result1 = it will create a different execution context ( variable environment +execution theread)
+step 4 : Again step 2 and step 3 for new environment 
+         val1 = undefined , val2 = undefined , total = undefined
+         execution phase = num1 = 10, num2=5 , total = 15
+step 5 : total is returned to global execution context. After this new execution context will delete
+step 6: now for result2 same a new execution context created and deleted after return
+
+
+Call Stack
+
+If function one calls function two  (nested functions)
+entry in call stack : one() then two()
+exit from call stack : two() then one() -->LIFO
+        
