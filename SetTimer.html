@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            width: 100px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #start {
+            background-color: green;
+            color: white;
+        }
+        #reset {
+            background-color: red;
+            color: white;
+        }
+        #timerDisplay {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⏳ Countdown Timer</h1>
+    <input type="number" id="timeInput" placeholder="Seconds">
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
+    <h2 id="timerDisplay">00:00</h2>
+
+    <script>
+        let timerId;  // Stores setTimeout ID
+        let remainingTime = 0;  // Stores countdown value
+
+        function startTimer() {
+            // Get input value & convert to number
+            let inputTime = parseInt(document.getElementById("timeInput").value);
+
+            // Validate input
+            if (isNaN(inputTime) || inputTime <= 0) {
+                alert("Please enter a valid number!");
+                return;
+            }
+
+            remainingTime = inputTime;
+            document.getElementById("timerDisplay").innerText = formatTime(remainingTime);
+            countdown();
+        }
+
+        function countdown() {
+            if (remainingTime > 0) {
+                document.getElementById("timerDisplay").innerText = formatTime(remainingTime);
+                remainingTime--;
+
+                // Call the function again after 1 second
+                timerId = setTimeout(countdown, 1000);
+            } else {
+                document.getElementById("timerDisplay").innerText = "⏳ Time's Up!";
+            }
+        }
+
+        function resetTimer() {
+            clearTimeout(timerId); // Stop timeout execution
+            document.getElementById("timerDisplay").innerText = "00:00";
+            document.getElementById("timeInput").value = "";
+        }
+
+        function formatTime(seconds) {
+            let min = Math.floor(seconds / 60);
+            let sec = seconds % 60;
+            return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+        }
+
+        document.getElementById("start").addEventListener("click", startTimer);
+        document.getElementById("reset").addEventListener("click", resetTimer);
+    </script>
+
+</body>
+</html>

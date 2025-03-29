@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s ease-in-out;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #start {
+            background-color: green;
+            color: white;
+        }
+        #stop {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Background Color Changer</h1>
+    <button id="start" class="btn">Start</button>
+    <button id="stop" class="btn">Stop</button>
+
+    <script>
+        let intervalId = null; // Store interval ID
+
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to start changing background color
+        function startColorChange() {
+            if (!intervalId) { // Avoid multiple intervals running
+                intervalId = setInterval(() => {
+                    document.body.style.backgroundColor = getRandomColor();
+                }, 1000);
+            }
+        }
+
+        // Function to stop changing background color
+        function stopColorChange() {
+            clearInterval(intervalId); // Stop the interval
+            intervalId = null; // Reset interval ID
+        }
+
+        // Attach event listeners
+        document.getElementById("start").addEventListener("click", startColorChange);
+        document.getElementById("stop").addEventListener("click", stopColorChange);
+    </script>
+
+</body>
+</html>
