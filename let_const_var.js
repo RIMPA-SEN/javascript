@@ -6,10 +6,12 @@ let age = 27;
 console.log(age);
 //let age = 28; redeclaration not allowed but update allowed
 age=28;
+lastname ="sen"  //without any keyword
 
 
 //var keyword - redecalation allowed -global scope
-
+/* do not use var only let
+*/
 var number = 89;
 var number =90;
 console.log(number);
