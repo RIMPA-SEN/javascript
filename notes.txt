@@ -22,7 +22,7 @@ git commands to setup:
 Day-1
 1. Take data from user and store in variables. let var const
 2. Comments : single line // multi line /*......*/
-3. "use strict";  treat all JS code as newer version
+3. "use strict";  treat all JS code as newer version and alert(3+3)
 4. ECMA Script
 5. DataTypes : Primitive (Call By Value) and Non-primitive (Call By Reference)
 6. typeof operator
