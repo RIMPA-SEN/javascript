@@ -24,7 +24,7 @@ console.log(typeof x);
 let y=undefined;
 console.log(typeof y) //undefined
 
-//Non Primitive=Object
+//Non Primitive=Object, Array,Functions
 
 const Student= {
     fullName: "Anil",
