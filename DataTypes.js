@@ -18,9 +18,11 @@ console.log(bigint);
 //123n
 console.log(typeof bigint);
 //bigint
-let x = Symbol("Hello!");
+let x = Symbol("Hello!"); ---> it denotes uniqueness. To determine unique components in react
 console.log(x)
 console.log(typeof x);
+let y=undefined;
+console.log(typeof y) //undefined
 
 //Non Primitive=Object
 
