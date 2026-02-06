@@ -32,6 +32,7 @@ Day-1
 10. Strings
 11. Numbers And Maths
 12. Date and Time
+13. == and === difference
 
 Day-2
 1. Arrays
