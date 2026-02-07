@@ -34,6 +34,9 @@ const Student= {
 };
 console.log(Student);
 console.log(typeof Student);
+
+
+  
 //object
 console.log(typeof Student.fullName);
 console.log(Student["fullName"]);
@@ -44,5 +47,12 @@ Student["age"]= Student.age + 1;
 console.log(Student.age);
 Student.fullName = "Rimpa Sen";
 console.log(Student.fullName)
+
+
+
+/*
+Memory
+Stack (primitive - by value) and Heap (non primitive -by reference) see examples
+*/
 
 
