@@ -31,3 +31,5 @@ console.log(str2);
 
 //Another way to define string
 let str3 = new String("Rimpa");
+
+//another methods substring, indexOf,slice, replace,includes,split
