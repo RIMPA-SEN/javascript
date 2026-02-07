@@ -12,6 +12,10 @@ marks[2]=66;
 console.log(marks);
 
 
+let num = new Array(1,2,3);
+// arrays copy using shallow copy not deep copy
+
+
 //looping arrays
 
 for(let i of str){
@@ -40,13 +44,13 @@ console.log(str);
 unshift(marks);
 console.log(marks); 
 
-//Some more methods --> shift, includes,indexOf,join,slice vs splice
+//Some more methods --> unshift,shift, includes,indexOf,join,slice vs splice
 
 let methods = ["apple", "guava","banana","pineapple","papaya"];
 console.log(methods.shift());
 console.log(methods);
-console.log(methods.includes("watermelon"));
-console.log(methods.indexOf("guava"));
+console.log(methods.includes("watermelon")); //false
+console.log(methods.indexOf("guava")); //1
 
 //join method converts array to String or join with another separator-->converts words to sentence or convert array to query string
 let joinmethod =  methods.join();
@@ -70,20 +74,23 @@ console.log(methods);
 
 let marvel = ["thor","hulk","vision","captain america"];
 let dc = ["superman", "batman","aqua"];
+marvel.push(dc);
+console.log(marvel); // ['thor','hulk','vision','captain amarica',['superman','batman','aqua']]
 let spreadarray = [...marvel, ...dc];
-console.log(spreadarray);
+console.log(spreadarray); //  ['thor','hulk','vision','captain amarica','superman','batman','aqua']
 
 let flatexample = [1,2,3,[6,7],[9,0],6,8];
 console.log(flatexample.flat());
 
 //Convert any data to array
-console.log(Array.isArray("Rimpa"));
-console.log(Array.from("Rimpa"));
+console.log(Array.isArray("Rimpa")); //false
+console.log(Array.from("Rimpa")); //[ r, i , m,p,a]
 let score1 =100;
 let score2 =200;
 let score3 = 300;
-console.log(Array.of(score1, score2,score3));
+console.log(Array.of(score1, score2,score3)); //[ 100,200,300]
 
+console.log(Array.from({name:"Rimpa"}); //[] because whose array key or value
 
 
 
