@@ -30,8 +30,12 @@ Student.greeting(); */
 
 
 //symbols as key in object
-
-
+const mySym = Symbol("key1")
+const user={
+    name :"juju",
+    [mySym]= "myvalue"
+}
+console.log(user[mySym]); //myvalue
 //Create Singleton Object
 
 const tinderUser=new Object();
