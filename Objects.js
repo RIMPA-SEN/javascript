@@ -54,7 +54,16 @@ const user = {
 };
 console.log(user.fullName.firstname);
 
-//assign. Object.keys(), Object.values(), Object.entries(), Student.hasOwnProperty("fullName")
+//merge two objects
+const obj1 = {1:"a", 2:"b"};
+const obj2={3:"c",4:"d"};
+const obj3 = Object.assign({}, Obj1,obj2);
+console.log(obj3); //{'1':'a','2':'b','3':'c','4':'d'}
+
+or we can use spread operator to join
+const obj3={...obj1, ...obj2}; //same output as assign
+
+//assign. Object.keys()-->returns array of keys, Object.values(), Object.entries(), Student.hasOwnProperty("fullName")
 
 
 //Destructuring objects
@@ -63,5 +72,9 @@ const course={
     price :"999",
     courseInstructor : "hitesh"
 }
+const{courseInstructor}=course; //now you don't have to write evrytime course.courseInstructor
+console.log(courseInstructor); //hitesh
+
+//you can use alias also
 const{courseInstructor:instructor}=course;
-console.log(instructor);
+console.log(instructor); //hitesh
