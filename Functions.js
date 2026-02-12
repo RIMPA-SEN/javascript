@@ -60,7 +60,7 @@ const arrowSum = (a,b)=>{
 };
 arrowSum(8,9);
 
-// if you use () instead of {} then no use of return keyword
+// if you use () instead of {} then no use of return keyword but if you use {} then return is mandatory
 
 const addTwo=(num1,num2)=> (num1 + num2)
 addTwo(5,6);
@@ -151,7 +151,7 @@ console.log(sum);
 //IIFE -->An Immediately Invoked Function Expression (IIFE) is a function that executes immediately after being defined.
 (function() {
     console.log("IIFE executed!");
-})();
+})(); //this is named IIFE
 
 
 (function() {
@@ -162,7 +162,7 @@ console.log(sum);
 
 (() => {
     console.log("Arrow function IIFE");
-})();
+})(); //unnamed IIFE
 
 (function(name) {
     console.log(`Hello, ${name}!`);
