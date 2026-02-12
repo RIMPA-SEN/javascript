@@ -9,9 +9,15 @@ function myMessage(msg){
     console.log(msg);
 }
 myMessage("I love Javascript");
-
+//If you do not pass any argument then output will come as undefined.
 
 //return statement-->no statement executes after return. if you do not pass any value then result will be undefined
+
+//to prevent undefined we can give a default parameter also if no argument the function uses inline parameter or else argument will override
+
+function myFunction(msg="Hello"){
+    console.log(msg); // if argument not provided then output will be "Hello"
+}
 
 function sum(x,y){
     sum = x+y; 
@@ -21,7 +27,7 @@ let result = sum(9,6);
 console.log(result);
 
 
-//rest operator ... when we don't know number of arguments
+//rest operator ... when we don't know number of arguments eg price of products in ecommerce website user can add any number of products
 function calculatePrice(...num){
      return num; 
 }
